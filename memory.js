@@ -42,10 +42,12 @@ class Memory {
   }
 
   get(ptr) {
+    console.log(this.memory, 'from the get method in memory.js')
     return this.memory[ptr];
   }
 
   set(ptr, value) {
+    console.log(value, 'value in set method')
     this.memory[ptr] = value;
   }
 }

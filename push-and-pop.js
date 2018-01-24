@@ -33,12 +33,25 @@ function main(){
   arr.pop();
   arr.pop();
   arr.pop();
+  arr.pop();
+  arr.pop();
+  arr.pop();
 
 
-  //====What is the length, capacity and address of your array? Explain the result of your program after adding the new lines of code
+//====What is the length, capacity and address of your array? Explain the result of your program after adding the new lines of code
 
-  //The length is 3, the capacity is 12 and the ptr is 3; the length is 3 because we popped three values from the array; the capacity is still 12 because all we're doing is decreasing the length and retainting the total capacity in case we want to use it later; When we resized before (pushing 4th element) we moved the ptr so it stays at 3 no matter how many times you pop
+//The length is 3, the capacity is 12 and the ptr is 3; the length is 3 because we popped three values from the array; the capacity is still 12 because all we're doing is decreasing the length and retainting the total capacity in case we want to use it later; When we resized before (pushing 4th element) we moved the ptr so it stays at 3 no matter how many times you pop
 
+//Print this one item that you just added. What is the result? 
+//Can you explain your result?
+
+arr.push('tauhida')
+
+/*
+we are receiving NaN because that data type we specify this.memory 
+to equal does not support anything other than numbers
+*/
+  console.log(arr.get(0));
 
   
   console.log(arr);

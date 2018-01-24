@@ -12,13 +12,17 @@ class Array {
   //cannot preallocate slots using this constructor
 
   get(index) {
+    console.log('get function ran', index)
+
     if (index < 0 || index >= this.length) {
       throw new Error('Index error');
     }
+    console.log(this.ptr, 'this.ptr in get method')
     return mem.get(this.ptr + index);
   }
   
   push(value) {
+    console.log(value);
     if (this.length >= this._capacity) {
       console.log('push value when resizing', value)
       this._resize((this.length + 1) * Array.SIZE_RATIO);
