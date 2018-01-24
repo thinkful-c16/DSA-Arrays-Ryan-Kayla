@@ -13,6 +13,7 @@ class Array {
   
   push(value) {
     if (this.length >= this._capacity) {
+      console.log('push value when resizing', value)
       this._resize((this.length + 1) * Array.SIZE_RATIO);
     }
     mem.set(this.ptr + this.length, value);
