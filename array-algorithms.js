@@ -15,7 +15,7 @@ console.log(xWhiteSpace('tauhida parveen'));
 //=== Filtering an array ===//
 let numArray = [1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2,1]
 function filterNum(numArray, condition){
-  ticks++;
+  // ticks++;
   if(numArray.length === 0){
     return []
   }
@@ -26,3 +26,19 @@ function filterNum(numArray, condition){
 }
 console.log(filterNum(numArray, x => x > 4))
 console.log(ticks);
+
+
+//=== Max Sum in the Array ===//
+function maxSum(arr){
+
+  let curr_max = 0, 
+      maxSoFar = 0;
+  
+  for(let i=0; i< arr.length; i++){
+    curr_max = Math.max(0, curr_max + arr[i]);
+    maxSoFar = Math.max(curr_max, maxSoFar)
+  }
+  return maxSoFar;
+}
+
+console.log('maxSum function output is', maxSum([4,6,-3,5,-2,1]))
