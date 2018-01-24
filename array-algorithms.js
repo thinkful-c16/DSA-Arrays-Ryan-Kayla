@@ -25,7 +25,7 @@ function filterNum(numArray, condition){
   return filterNum(numArray.slice(1), condition)
 }
 console.log(filterNum(numArray, x => x > 4))
-console.log(ticks);
+// console.log(ticks);
 
 
 //=== Max Sum in the Array ===//
@@ -42,3 +42,34 @@ function maxSum(arr){
 }
 
 console.log('maxSum function output is', maxSum([4,6,-3,5,-2,1]))
+
+//== MERGE ARRAYS ==//
+
+//recurisve attempt
+// function mergeArr(arr1, arr2) {
+//   if (arr1.length > 0) {
+//     return arr1.slice(0);
+//   }
+//   if (arr2.length === 0) {
+//     return [];
+//   }
+
+//   return mergeArr(arr1.slice(0), arr2.slice(0), [...arr1, ...arr2]);
+
+// }
+
+const mergeArr = (arr1, arr2) => {
+  let newArr = [...arr1, ...arr2];
+  newArr.sort((a,b) => {
+    ticks++;
+    return a - b;
+  });
+  return newArr;
+
+};
+
+let first = [1, 3, 6, 8, 11];
+let second = [2, 3, 5, 8, 9, 10];
+
+console.log(mergeArr(first, second));
+console.log(ticks)
