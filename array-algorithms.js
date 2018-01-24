@@ -73,3 +73,14 @@ let second = [2, 3, 5, 8, 9, 10];
 
 console.log(mergeArr(first, second));
 console.log(ticks)
+
+//=== Remove Characters ===//
+function removeCharacters(string, charsToRmv){
+
+  for(let i=0; i<charsToRmv.length; i++){
+    for(let j=0; j<string.length; j++){
+      
+    }
+  }
+
+}
