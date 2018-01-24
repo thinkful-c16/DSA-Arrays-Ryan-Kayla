@@ -8,6 +8,7 @@ class Memory {
 
   //resizes things
   allocate(size) {
+    console.log('Allocate size >>>>', size)
     if (this.head + size > this.memory.length) {
       return null;
     }
@@ -21,6 +22,8 @@ class Memory {
   free(ptr) {}
 
   copy(toIdx, fromIdx, size) {
+    console.log('new ptr', toIdx);
+    console.log('old ptr', fromIdx);
     if (fromIdx === toIdx) {
       return;
     }
