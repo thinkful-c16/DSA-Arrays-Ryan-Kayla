@@ -6,6 +6,7 @@ class Memory {
     this.head = 0;
   }
 
+  //resizes things
   allocate(size) {
     if (this.head + size > this.memory.length) {
       return null;
