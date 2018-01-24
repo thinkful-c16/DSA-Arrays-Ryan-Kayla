@@ -10,6 +10,13 @@ class Array {
     this.ptr = mem.allocate(this.length);
   }
   //cannot preallocate slots using this constructor
+
+  get(index) {
+    if (index < 0 || index >= this.length) {
+      throw new Error('Index error');
+    }
+    return mem.get(this.ptr + index);
+  }
   
   push(value) {
     if (this.length >= this._capacity) {
@@ -18,6 +25,16 @@ class Array {
     }
     mem.set(this.ptr + this.length, value);
     this.length++;
+  }
+
+  pop() {
+    if (this.length === 0) {
+      throw new Error('Index error');
+    }
+    const value = mem.get(this.ptr + this.length - 1);
+    console.log('Popped value', value);
+    this.length--;
+    return value;
   }
 
   _resize(size){
