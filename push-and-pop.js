@@ -53,6 +53,11 @@ to equal does not support anything other than numbers
 */
   console.log(arr.get(0));
 
+
+//What is the purpose of the _resize() function in your Array class?
+/*
+The resize function resizes the array once the length of the array exceeds the capacity set. The function then sets the new point index and frees up the space from the old PointerEvent. The capacity then gets reset according to the new length of the array multiplied by the SIZE_RATIO
+*/
   
   console.log(arr);
 }
